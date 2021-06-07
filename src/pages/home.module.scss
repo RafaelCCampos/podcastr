@@ -1,0 +1,108 @@
+.homepage {
+    padding: 0 4rem;
+    height: calc(100vh - 6.5rem);
+    overflow-y: scroll;
+
+    h2 {
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.latestEpisodes {
+    ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        list-style: none;
+        gap: 1.5rem;
+    }
+
+    li {
+        padding: 1.25rem;
+        border: 1px solid var(--gray-100);
+        border-radius: 1.5rem;
+        background: var(--white);
+        position: relative;
+
+        align-items: center;
+        display: flex;
+
+        img {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 1rem;
+        }
+
+        .episodeDetails {
+            margin-left: 1rem;
+            flex: 1;
+            
+            a {
+                color: var(--gray-800);
+                font-family: Lexand, sans-serif;
+                font-weight: 600;
+                text-decoration: none;
+                line-height: 1.4rem;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+            p {
+                margin-top: 0.5rem;
+                font-size: 0.85rem;
+                max-width: 70%;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            span {
+                margin-top: 0.5rem;
+                font-size: 0.85rem;
+                
+
+                &:last-child {
+                    margin-left: 0.5rem;
+                    padding-left: 0.5rem;
+                    position: relative;
+                    
+                    &::before {
+                        content: "";
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 50%;
+                        background: #DDD;
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+            }
+        }
+
+        button {
+            width: 2.5rem;
+            height: 2.5rem;
+            font-size: 0;
+            background: var(--white);
+            border: 1px solid var(--gray-100);
+            border-radius: 0.675rem;
+            transition: filter 0.2s;
+
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+            img {
+               width: 1.5rem;
+               height: 1.5rem;
+            }
+
+            &:hover {
+                filter: brightness(0.95);
+            }
+        }
+    }
+}  
